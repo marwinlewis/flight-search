@@ -6,11 +6,12 @@
     <div *ngIf="i==1 && flights.length>0">
         <h1>{{returnWay.origin}} to {{returnWay.destination}}</h1>
         <p *ngIf="flights.length<=0">No results to display.</p>
-    </div>    
+    </div>
     <article class="flight" *ngFor="let flight of flights">
         <section class="flight-name col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2">
             <p>{{flight.name}}</p>
             <p>{{flight.flightNo}}</p>
+            <p *ngIf="flight.connecting==true"><a href="#">Show details</a></p>
         </section>
         <section class="flight-time col-4 col-sm-4 col-md-4 col-lg-2 col-xl-2">
             <p class="flight-time-departure">{{flight.departureTime}}</p>

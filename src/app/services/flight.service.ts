@@ -111,10 +111,11 @@ export class FlightService {
                   addition.date = apiFlightData.date;
                   addition.departureTime = apiFlightData.departureTime;
                   addition.destination = newApiFlightData.destination;
-                  addition.flightNo = apiFlightData.flightNo + " " + newApiFlightData.flightNo;
-                  addition.name = apiFlightData.name + " " + newApiFlightData.name;
+                  addition.flightNo = apiFlightData.flightNo + " -> " + newApiFlightData.flightNo;
+                  addition.name = apiFlightData.name + " -> " + newApiFlightData.name;
                   addition.origin = apiFlightData.origin;
                   addition.price = apiFlightData.price + newApiFlightData.price;
+                  addition.connecting = true;
                   this._flightData.oneWay.push(addition); //addition
                   this._flightData.oneWay.push(apiFlightData); //first flight
                   this._flightData.oneWay.push(newApiFlightData); //second flight
